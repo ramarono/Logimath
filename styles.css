@@ -957,6 +957,162 @@ h1, h2, h3, h4 { font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
 
 
 /* ════════════════════════════════════════════════════════════
+   PLANES INCLUYEN + INSCRIPCIÓN
+   ════════════════════════════════════════════════════════════ */
+
+/* Center last row of the 7-card grid */
+.cursos-grid--planes {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
+}
+
+/* ── Planes incluyen ── */
+.planes-incluyen {
+  margin-top: 4rem;
+  text-align: center;
+}
+.planes-incluyen__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy-dark);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 1.8rem;
+  position: relative;
+  display: inline-block;
+}
+.planes-incluyen__title::before,
+.planes-incluyen__title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background: var(--navy);
+  opacity: .25;
+}
+.planes-incluyen__title::before { right: calc(100% + 1rem); }
+.planes-incluyen__title::after  { left:  calc(100% + 1rem); }
+
+.planes-beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1.5rem 2rem;
+  background: var(--gray-50, #f8fafc);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+}
+.pb-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  min-width: 100px;
+  flex: 1;
+}
+.pb-icon { font-size: 2.2rem; }
+.pb-item p {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--navy-dark);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ── GRATIS banners ── */
+.planes-gratis {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.pg-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  min-width: 200px;
+  border: 2px solid transparent;
+  transition: transform .25s var(--ease-bounce), box-shadow .25s;
+}
+.pg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.pg-card--green {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+.pg-card--blue {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+.pg-icon { font-size: 2.2rem; }
+.pg-label {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: .2rem;
+}
+.pg-card--green .pg-gratis { color: #16a34a; }
+.pg-card--blue  .pg-gratis { color: var(--navy); }
+.pg-gratis {
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-family: var(--font-alt);
+}
+
+/* ── Inscripción card ── */
+.inscripcion-card {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.inscripcion-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--white);
+  border: 2px solid var(--navy);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-md);
+  transition: transform .25s var(--ease-bounce), box-shadow .25s;
+}
+.inscripcion-inner:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.inscripcion-icon { font-size: 2.8rem; }
+.inscripcion-label {
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--navy-dark);
+  margin-bottom: .2rem;
+}
+.inscripcion-label span { font-weight: 500; color: var(--gray-500); }
+.inscripcion-price {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--red);
+  font-family: var(--font-alt);
+  line-height: 1;
+  margin: .3rem 0;
+}
+.inscripcion-desc {
+  font-size: .78rem;
+  color: var(--gray-500);
+}
+
+/* ════════════════════════════════════════════════════════════
    CTA BAND
    ════════════════════════════════════════════════════════════ */
 .section--cta-band {
