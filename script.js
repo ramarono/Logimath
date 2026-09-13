@@ -18,7 +18,7 @@ onNavbarScroll();
 
 // ── Mobile hamburger ──────────────────────────────────────────
 const hamburger = document.getElementById('navHamburger');
-const navLinks  = document.getElementById('navLinks');
+const navLinks = document.getElementById('navLinks');
 
 hamburger.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('open');
@@ -38,8 +38,8 @@ navLinks.querySelectorAll('.nav-link').forEach(link => {
 });
 
 // ── Active nav link on scroll ────────────────────────────────
-const sections   = document.querySelectorAll('main section[id]');
-const navItems   = document.querySelectorAll('.nav-link[data-section]');
+const sections = document.querySelectorAll('main section[id]');
+const navItems = document.querySelectorAll('.nav-link[data-section]');
 
 const sectionObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -70,7 +70,7 @@ const revealObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 // ── Activities tabs ──────────────────────────────────────────
-const actTabs   = document.querySelectorAll('.act-tab');
+const actTabs = document.querySelectorAll('.act-tab');
 const actPanels = document.querySelectorAll('.act-panel');
 
 actTabs.forEach(tab => {
@@ -97,7 +97,7 @@ actTabs.forEach(tab => {
     let nextIdx = -1;
 
     if (e.key === 'ArrowRight') nextIdx = (idx + 1) % tabList.length;
-    if (e.key === 'ArrowLeft')  nextIdx = (idx - 1 + tabList.length) % tabList.length;
+    if (e.key === 'ArrowLeft') nextIdx = (idx - 1 + tabList.length) % tabList.length;
 
     if (nextIdx >= 0) {
       tabList[nextIdx].focus();
@@ -112,7 +112,7 @@ if (contactForm) {
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    const btn  = contactForm.querySelector('[type="submit"]');
+    const btn = contactForm.querySelector('[type="submit"]');
     const orig = btn.textContent;
     btn.textContent = '✓ ¡Mensaje enviado!';
     btn.style.background = '#22c55e';
@@ -155,10 +155,10 @@ function animateCounter(el, target, duration = 1500, suffix = '') {
   const startVal = 0;
 
   function step(now) {
-    const elapsed  = now - start;
+    const elapsed = now - start;
     const progress = Math.min(elapsed / duration, 1);
-    const ease     = 1 - Math.pow(1 - progress, 3); // ease-out-cubic
-    const current  = Math.round(startVal + (target - startVal) * ease);
+    const ease = 1 - Math.pow(1 - progress, 3); // ease-out-cubic
+    const current = Math.round(startVal + (target - startVal) * ease);
 
     el.textContent = current + suffix;
 
@@ -172,9 +172,9 @@ function animateCounter(el, target, duration = 1500, suffix = '') {
 const statsEl = document.querySelector('.hero-stats');
 if (statsEl) {
   const counterData = [
-    { selector: '.stat-card:nth-child(1) .stat-num', target: 500, suffix: '+' },
-    { selector: '.stat-card:nth-child(3) .stat-num', target: 98,  suffix: '%' },
-    { selector: '.stat-card:nth-child(5) .stat-num', target: 12,  suffix: '+' },
+    { selector: '.stat-card:nth-child(1) .stat-num', target: 50, suffix: '+' },
+    { selector: '.stat-card:nth-child(3) .stat-num', target: 98, suffix: '%' },
+    { selector: '.stat-card:nth-child(5) .stat-num', target: 4, suffix: '+' },
   ];
 
   let animated = false;
