@@ -950,10 +950,20 @@ h1, h2, h3, h4 { font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
   color: var(--gray-500);
 }
 
-/* Grid de planes: auto-fit para 7 tarjetas */
+/* Grid de planes: flexbox centrado para que la última fila quede centrada */
 .cursos-grid--planes {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  grid-template-columns: unset; /* override the parent grid */
 }
+.cursos-grid--planes .curso-card {
+  flex: 0 1 230px;   /* cada tarjeta mide ~230px, ni más ni menos */
+  max-width: 260px;
+  min-width: 200px;
+}
+
 
 
 /* ════════════════════════════════════════════════════════════
@@ -961,10 +971,7 @@ h1, h2, h3, h4 { font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
    ════════════════════════════════════════════════════════════ */
 
 /* Center last row of the 7-card grid */
-.cursos-grid--planes {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  justify-items: center;
-}
+
 
 /* ── Planes incluyen ── */
 .planes-incluyen {
