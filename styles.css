@@ -899,6 +899,10 @@ h1, h2, h3, h4 { font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
 .cc-header--blue  { background: linear-gradient(135deg, #2a65c0, var(--navy));          }
 .cc-header--navy  { background: linear-gradient(135deg, var(--navy-dark), #041a52);     }
 .cc-header--gold  { background: linear-gradient(135deg, var(--yellow), var(--yellow-dark)); }
+.cc-header--green  { background: linear-gradient(135deg, #22c55e, #16a34a); }
+.cc-header--orange { background: linear-gradient(135deg, #f97316, #ea580c); }
+.cc-header--purple { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+.cc-header--teal   { background: linear-gradient(135deg, #0891b2, #0e7490); }
 
 .cc-level {
   background: rgba(255,255,255,.25);
@@ -931,6 +935,26 @@ h1, h2, h3, h4 { font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
 }
 
 .cc-footer { margin-top: auto; }
+
+/* Precio del plan */
+.cc-price {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--navy-dark);
+  margin: 1rem 0 1.2rem;
+  font-family: var(--font-alt);
+}
+.cc-period {
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--gray-500);
+}
+
+/* Grid de planes: auto-fit para 7 tarjetas */
+.cursos-grid--planes {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
 
 /* ════════════════════════════════════════════════════════════
    CTA BAND
