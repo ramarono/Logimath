@@ -1,602 +1,652 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cursos Avanzados — LogiMATH</title>
-  <meta name="description" content="Aprende Python, SQL, Excel, Power BI, Tableau, Estadística y Ciencia de Datos con proyectos reales orientados al mundo laboral.">
+  <meta name="description"
+    content="Aprende Python, SQL, Excel, Power BI, Tableau, Estadística y Ciencia de Datos con proyectos reales orientados al mundo laboral.">
   <link rel="stylesheet" href="cursos.css">
 </head>
+
 <body>
 
-<!-- ════════════════════ NAVBAR ════════════════════ -->
-<nav id="navbar" aria-label="Navegación principal">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <span>Logi<span style="color:var(--cyan)">MATH</span></span>
-      <span class="nav-logo-sub">cursos avanzados</span>
-    </a>
-    <div class="nav-links" id="navLinks">
-      <a href="#inicio"   class="nav-link" data-section="inicio">Inicio</a>
-      <a href="#cursos"   class="nav-link" data-section="cursos">Cursos</a>
-      <a href="#rutas"    class="nav-link" data-section="rutas">Rutas</a>
-      <a href="#proyectos" class="nav-link" data-section="proyectos">Proyectos</a>
-      <a href="#empresas" class="nav-link" data-section="empresas">Para empresas</a>
-      <a href="index.html" class="nav-link">← LogiMATH Kids</a>
-      <a href="#contacto" class="nav-link nav-link--cta" id="navContactoCta">Contacto</a>
+  <!-- ════════════════════ NAVBAR ════════════════════ -->
+  <nav id="navbar" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span>Logi<span style="color:var(--cyan)">MATH</span></span>
+        <span class="nav-logo-sub">cursos avanzados</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link" data-section="inicio">Inicio</a>
+        <a href="#cursos" class="nav-link" data-section="cursos">Cursos</a>
+        <a href="#rutas" class="nav-link" data-section="rutas">Rutas</a>
+        <a href="#proyectos" class="nav-link" data-section="proyectos">Proyectos</a>
+        <a href="#empresas" class="nav-link" data-section="empresas">Para empresas</a>
+        <a href="index.html" class="nav-link">← LogiMATH Kids</a>
+        <a href="#contacto" class="nav-link nav-link--cta" id="navContactoCta">Contacto</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
+  </nav>
 
-<!-- ════════════════════ HERO ════════════════════ -->
-<section class="hero" id="inicio" aria-label="Presentación">
-  <div class="hero-grid"></div>
-  <div class="hero-orbs">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-
-  <!-- floating code decoration -->
-  <div style="position:absolute;top:25%;left:5%;opacity:.12;font-family:'Courier New',monospace;font-size:.7rem;color:#00d4ff;pointer-events:none;line-height:1.8">
-    import pandas as pd<br>
-    df = pd.read_csv('data.csv')<br>
-    df.groupby('region').sum()
-  </div>
-  <div style="position:absolute;bottom:20%;right:5%;opacity:.1;font-family:'Courier New',monospace;font-size:.7rem;color:#00d4ff;pointer-events:none;line-height:1.8;text-align:right">
-    SELECT region, SUM(ventas)<br>
-    FROM reportes<br>
-    GROUP BY region
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-eyebrow">LogiMATH · Cursos Avanzados</div>
-
-    <h1 class="hero-title">
-      Aprende tecnología<br>
-      para el <span class="accent">mundo laboral</span>
-    </h1>
-
-    <p class="hero-subtitle">
-      Domina <strong style="color:rgba(255,255,255,.85)">Python, SQL, Excel, Power BI, Tableau, Estadística y Ciencia de Datos</strong>
-      mediante proyectos y aplicaciones prácticas.
-    </p>
-    <p class="hero-subtitle-2">
-      Aprende a analizar datos, crear dashboards, automatizar procesos<br>y trabajar con bases de datos.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#cursos" class="btn btn--cyan btn--lg" id="heroCursosBtn">Explorar cursos ↓</a>
-      <a href="#rutas"  class="btn btn--ghost btn--lg" id="heroRutasBtn">Encuentra tu ruta</a>
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <section class="hero" id="inicio" aria-label="Presentación">
+    <div class="hero-grid"></div>
+    <div class="hero-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
     </div>
 
-    <div class="tech-stack">
-      <span class="tech-badge">Python</span>
-      <span class="tech-badge">SQL</span>
-      <span class="tech-badge">Excel</span>
-      <span class="tech-badge">Power BI</span>
-      <span class="tech-badge">Tableau</span>
-      <span class="tech-badge">Pandas</span>
-      <span class="tech-badge">Machine Learning</span>
-      <span class="tech-badge">Estadística</span>
+    <!-- floating code decoration -->
+    <div
+      style="position:absolute;top:25%;left:5%;opacity:.12;font-family:'Courier New',monospace;font-size:.7rem;color:#00d4ff;pointer-events:none;line-height:1.8">
+      import pandas as pd<br>
+      df = pd.read_csv('data.csv')<br>
+      df.groupby('region').sum()
     </div>
-  </div>
-</section>
+    <div
+      style="position:absolute;bottom:20%;right:5%;opacity:.1;font-family:'Courier New',monospace;font-size:.7rem;color:#00d4ff;pointer-events:none;line-height:1.8;text-align:right">
+      SELECT region, SUM(ventas)<br>
+      FROM reportes<br>
+      GROUP BY region
+    </div>
 
-<!-- ════════════════════ BENEFITS ════════════════════ -->
-<section class="benefits" aria-label="Beneficios">
-  <div class="container">
-    <div class="text-center reveal">
-      <span class="section-tag">Metodología</span>
-      <h2 class="section-title">Aprende haciendo</h2>
-      <p class="section-subtitle">No enseñamos solo teoría. Cada concepto se aplica en proyectos similares a los que puedes encontrar en una empresa.</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card reveal">
-        <div class="benefit-icon">🏗️</div>
-        <h3>Proyectos Reales</h3>
-        <p>Desarrolla proyectos similares a los que puedes encontrar en una empresa real.</p>
+    <div class="hero-content">
+      <div class="hero-eyebrow">LogiMATH · Cursos Avanzados</div>
+
+      <h1 class="hero-title">
+        Aprende tecnología<br>
+        para el <span class="accent">mundo laboral</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Domina <strong style="color:rgba(255,255,255,.85)">Python, SQL, Excel, Power BI, Tableau, Estadística y Ciencia
+          de Datos</strong>
+        mediante proyectos y aplicaciones prácticas.
+      </p>
+      <p class="hero-subtitle-2">
+        Aprende a analizar datos, crear dashboards, automatizar procesos<br>y trabajar con bases de datos.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#cursos" class="btn btn--cyan btn--lg" id="heroCursosBtn">Explorar cursos ↓</a>
+        <a href="#rutas" class="btn btn--ghost btn--lg" id="heroRutasBtn">Encuentra tu ruta</a>
       </div>
-      <div class="benefit-card reveal reveal--delay-1">
-        <div class="benefit-icon">💼</div>
-        <h3>Enfoque Laboral</h3>
-        <p>Herramientas utilizadas diariamente por analistas y profesionistas.</p>
-      </div>
-      <div class="benefit-card reveal reveal--delay-2">
-        <div class="benefit-icon">📈</div>
-        <h3>Desde Cero</h3>
-        <p>Rutas diseñadas para avanzar progresivamente sin conocimientos previos.</p>
-      </div>
-      <div class="benefit-card reveal reveal--delay-3">
-        <div class="benefit-icon">🗂️</div>
-        <h3>Construye tu Portafolio</h3>
-        <p>Desarrolla proyectos que demuestren lo que sabes hacer.</p>
-      </div>
-      <div class="benefit-card reveal reveal--delay-4">
-        <div class="benefit-icon">⚡</div>
-        <h3>Aplicación Inmediata</h3>
-        <p>Utiliza lo aprendido en tus estudios, trabajo, investigación o negocio.</p>
+
+      <div class="tech-stack">
+        <span class="tech-badge">Python</span>
+        <span class="tech-badge">SQL</span>
+        <span class="tech-badge">Excel</span>
+        <span class="tech-badge">Power BI</span>
+        <span class="tech-badge">Tableau</span>
+        <span class="tech-badge">Pandas</span>
+        <span class="tech-badge">Machine Learning</span>
+        <span class="tech-badge">Estadística</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ════════════════════ COURSES ════════════════════ -->
-<section class="courses" id="cursos" aria-label="Cursos principales">
-  <div class="container">
-    <div class="text-center reveal">
-      <span class="section-tag">Cursos Principales</span>
-      <h2 class="section-title">Habilidades para el mundo laboral</h2>
-      <p class="section-subtitle">Aprende las herramientas que realmente puedes utilizar en el trabajo.</p>
+  <!-- ════════════════════ BENEFITS ════════════════════ -->
+  <section class="benefits" aria-label="Beneficios">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Metodología</span>
+        <h2 class="section-title">Aprende haciendo</h2>
+        <p class="section-subtitle">No enseñamos solo teoría. Cada concepto se aplica en proyectos similares a los que
+          puedes encontrar en una empresa.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal">
+          <div class="benefit-icon">🏗️</div>
+          <h3>Proyectos Reales</h3>
+          <p>Desarrolla proyectos similares a los que puedes encontrar en una empresa real.</p>
+        </div>
+        <div class="benefit-card reveal reveal--delay-1">
+          <div class="benefit-icon">💼</div>
+          <h3>Enfoque Laboral</h3>
+          <p>Herramientas utilizadas diariamente por analistas y profesionistas.</p>
+        </div>
+        <div class="benefit-card reveal reveal--delay-2">
+          <div class="benefit-icon">📈</div>
+          <h3>Desde Cero</h3>
+          <p>Rutas diseñadas para avanzar progresivamente sin conocimientos previos.</p>
+        </div>
+        <div class="benefit-card reveal reveal--delay-3">
+          <div class="benefit-icon">🗂️</div>
+          <h3>Construye tu Portafolio</h3>
+          <p>Desarrolla proyectos que demuestren lo que sabes hacer.</p>
+        </div>
+        <div class="benefit-card reveal reveal--delay-4">
+          <div class="benefit-icon">⚡</div>
+          <h3>Aplicación Inmediata</h3>
+          <p>Utiliza lo aprendido en tus estudios, trabajo, investigación o negocio.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Filter tabs -->
-    <div class="course-filters" role="group" aria-label="Filtrar cursos">
-      <button class="filter-btn active" data-filter="all"     id="filterAll">Todos</button>
-      <button class="filter-btn"        data-filter="excel"   id="filterExcel">Excel</button>
-      <button class="filter-btn"        data-filter="sql"     id="filterSql">SQL</button>
-      <button class="filter-btn"        data-filter="python"  id="filterPython">Python</button>
-      <button class="filter-btn"        data-filter="bi"      id="filterBi">Business Intelligence</button>
-      <button class="filter-btn"        data-filter="ds"      id="filterDs">Data Science</button>
-      <button class="filter-btn"        data-filter="stat"    id="filterStat">Estadística</button>
-      <button class="filter-btn"        data-filter="ml"      id="filterMl">Machine Learning</button>
+  <!-- ════════════════════ COURSES ════════════════════ -->
+  <section class="courses" id="cursos" aria-label="Cursos principales">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Cursos Principales</span>
+        <h2 class="section-title">Habilidades para el mundo laboral</h2>
+        <p class="section-subtitle">Aprende las herramientas que realmente puedes utilizar en el trabajo.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="course-filters" role="group" aria-label="Filtrar cursos">
+        <button class="filter-btn active" data-filter="all" id="filterAll">Todos</button>
+        <button class="filter-btn" data-filter="excel" id="filterExcel">Excel</button>
+        <button class="filter-btn" data-filter="sql" id="filterSql">SQL</button>
+        <button class="filter-btn" data-filter="python" id="filterPython">Python</button>
+        <button class="filter-btn" data-filter="bi" id="filterBi">Business Intelligence</button>
+        <button class="filter-btn" data-filter="ds" id="filterDs">Data Science</button>
+        <button class="filter-btn" data-filter="stat" id="filterStat">Estadística</button>
+        <button class="filter-btn" data-filter="ml" id="filterMl">Machine Learning</button>
+      </div>
+
+      <div class="courses-grid" id="coursesGrid">
+
+        <!-- PYTHON -->
+        <article class="course-card reveal" data-category="python" aria-label="Python para el Trabajo">
+          <div class="cc-top">
+            <div class="cc-emoji bg--python">🐍</div>
+            <div class="cc-meta">
+              <div class="cc-category">Python</div>
+              <h3>Python para el Trabajo</h3>
+              <p class="cc-tagline">Deja de hacer manualmente lo que Python puede hacer por ti.</p>
+            </div>
+          </div>
+          <div class="cc-content">
+            <p class="cc-hook">Aprende Python desde cero y aplícalo a situaciones reales del trabajo.</p>
+            <div class="cc-topics">
+              <span class="topic-chip">Fundamentos</span>
+              <span class="topic-chip">Pandas</span>
+              <span class="topic-chip">NumPy</span>
+              <span class="topic-chip">Automatización</span>
+              <span class="topic-chip">Excel/CSV</span>
+              <span class="topic-chip">Reportes</span>
+              <span class="topic-chip">APIs</span>
+              <span class="topic-chip">Scripts</span>
+            </div>
+          </div>
+          <div class="cc-bottom">
+            <span class="cc-level-badge level--beginner">Desde cero</span>
+            <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoPythonCta">Más info</a>
+          </div>
+        </article>
+
+        <!-- SQL -->
+        <article class="course-card reveal reveal--delay-1" data-category="sql" aria-label="SQL y Bases de Datos">
+          <div class="cc-top">
+            <div class="cc-emoji bg--sql">🗄️</div>
+            <div class="cc-meta">
+              <div class="cc-category">SQL</div>
+              <h3>SQL y Bases de Datos</h3>
+              <p class="cc-tagline">Aprende a encontrar respuestas dentro de millones de datos.</p>
+            </div>
+          </div>
+          <div class="cc-content">
+            <p class="cc-hook">Consulta, analiza y gestiona bases de datos empresariales con confianza.</p>
+            <div class="cc-topics">
+              <span class="topic-chip">SELECT / WHERE</span>
+              <span class="topic-chip">GROUP BY</span>
+              <span class="topic-chip">JOIN</span>
+              <span class="topic-chip">CASE WHEN</span>
+              <span class="topic-chip">Subqueries</span>
+              <span class="topic-chip">CTE</span>
+              <span class="topic-chip">Ventanas</span>
+              <span class="topic-chip">Casos empresariales</span>
+            </div>
+          </div>
+          <div class="cc-bottom">
+            <span class="cc-level-badge level--beginner">Desde cero</span>
+            <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoSqlCta">Más info</a>
+          </div>
+        </article>
+
+        <!-- EXCEL -->
+        <article class="course-card reveal reveal--delay-2" data-category="excel" aria-label="Excel Profesional">
+          <div class="cc-top">
+            <div class="cc-emoji bg--excel">📊</div>
+            <div class="cc-meta">
+              <div class="cc-category">Excel</div>
+              <h3>Excel Profesional</h3>
+              <p class="cc-tagline">Excel aplicado al mundo laboral, no un curso básico.</p>
+            </div>
+          </div>
+          <div class="cc-content">
+            <p class="cc-hook">Transforma datos en reportes, dashboards y análisis empresariales.</p>
+            <div class="cc-topics">
+              <span class="topic-chip">BUSCARX</span>
+              <span class="topic-chip">Tablas Dinámicas</span>
+              <span class="topic-chip">Dashboards</span>
+              <span class="topic-chip">Power Query</span>
+              <span class="topic-chip">KPI</span>
+              <span class="topic-chip">Macros</span>
+              <span class="topic-chip">Proyecto empresarial</span>
+            </div>
+          </div>
+          <div class="cc-bottom">
+            <span class="cc-level-badge level--intermediate">Intermedio</span>
+            <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoExcelCta">Más info</a>
+          </div>
+        </article>
+
+        <!-- POWER BI -->
+        <article class="course-card reveal" data-category="bi" aria-label="Power BI">
+          <div class="cc-top">
+            <div class="cc-emoji bg--pbi">📉</div>
+            <div class="cc-meta">
+              <div class="cc-category">Business Intelligence</div>
+              <h3>Power BI</h3>
+              <p class="cc-tagline">Convierte datos en decisiones.</p>
+            </div>
+          </div>
+          <div class="cc-content">
+            <p class="cc-hook">Crea dashboards interactivos y reportes profesionales que impacten.</p>
+            <div class="cc-topics">
+              <span class="topic-chip">Power Query</span>
+              <span class="topic-chip">Modelo de datos</span>
+              <span class="topic-chip">DAX</span>
+              <span class="topic-chip">KPI</span>
+              <span class="topic-chip">Visualización</span>
+              <span class="topic-chip">Storytelling</span>
+              <span class="topic-chip">Dashboard empresarial</span>
+            </div>
+          </div>
+          <div class="cc-bottom">
+            <span class="cc-level-badge level--intermediate">Intermedio</span>
+            <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoPbiCta">Más info</a>
+          </div>
+        </article>
+
+        <!-- TABLEAU -->
+        <article class="course-card reveal reveal--delay-1" data-category="bi" aria-label="Tableau">
+          <div class="cc-top">
+            <div class="cc-emoji bg--tableau">🔷</div>
+            <div class="cc-meta">
+              <div class="cc-category">Business Intelligence</div>
+              <h3>Tableau</h3>
+              <p class="cc-tagline">Visualiza datos y cuenta historias con ellos.</p>
+            </div>
+          </div>
+          <div class="cc-content">
+            <p class="cc-hook">Diseña dashboards interactivos con la herramienta favorita de analistas.</p>
+            <div class="cc-topics">
+              <span class="topic-chip">Visualizaciones</span>
+              <span class="topic-chip">KPI</span>
+              <span class="topic-chip">Filtros</span>
+              <span class="topic-chip">Parámetros</span>
+              <span class="topic-chip">Storytelling</span>
+              <span class="topic-chip">Casos empresariales</span>
+            </div>
+          </div>
+          <div class="cc-bottom">
+            <span class="cc-level-badge level--intermediate">Intermedio</span>
+            <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoTableauCta">Más info</a>
+          </div>
+        </article>
+
+      </div><!-- /courses-grid -->
     </div>
+  </section>
 
-    <div class="courses-grid" id="coursesGrid">
+  <!-- ════════════════════ SPECIALIZED ════════════════════ -->
+  <section class="specialized" aria-label="Especialízate">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag section-tag--light">Nivel Avanzado</span>
+        <h2 class="section-title section-title--light">Especialízate</h2>
+        <p class="section-subtitle section-subtitle--light">Lleva tus habilidades al siguiente nivel con cursos más
+          profundos y especializados.</p>
+      </div>
+      <div class="spec-grid">
 
-      <!-- PYTHON -->
-      <article class="course-card reveal" data-category="python" aria-label="Python para el Trabajo">
-        <div class="cc-top">
-          <div class="cc-emoji bg--python">🐍</div>
-          <div class="cc-meta">
-            <div class="cc-category">Python</div>
-            <h3>Python para el Trabajo</h3>
-            <p class="cc-tagline">Deja de hacer manualmente lo que Python puede hacer por ti.</p>
+        <!-- CIENCIA DE DATOS -->
+        <article class="spec-card reveal" aria-label="Ciencia de Datos" data-category="ds">
+          <div class="spec-icon">🧬</div>
+          <h3>Ciencia de Datos</h3>
+          <p>Análisis completo del ciclo de vida de los datos, desde la exploración hasta la construcción de modelos
+            predictivos.</p>
+          <div class="spec-topics">
+            <span class="spec-chip">Pandas</span>
+            <span class="spec-chip">NumPy</span>
+            <span class="spec-chip">EDA</span>
+            <span class="spec-chip">Visualización</span>
+            <span class="spec-chip">Estadística</span>
+            <span class="spec-chip">Machine Learning</span>
+            <span class="spec-chip">Proyecto final</span>
+          </div>
+        </article>
+
+        <!-- ESTADÍSTICA ANÁLISIS -->
+        <article class="spec-card reveal reveal--delay-1" aria-label="Estadística para Análisis" data-category="stat">
+          <div class="spec-icon">📐</div>
+          <h3>Estadística para Análisis de Datos</h3>
+          <p>Comprende los fundamentos estadísticos necesarios para analizar información empresarial con confianza.</p>
+          <div class="spec-topics">
+            <span class="spec-chip">Descriptiva</span>
+            <span class="spec-chip">Probabilidad</span>
+            <span class="spec-chip">Hipótesis</span>
+            <span class="spec-chip">Correlación</span>
+            <span class="spec-chip">Regresión</span>
+            <span class="spec-chip">ANOVA</span>
+          </div>
+        </article>
+
+        <!-- ESTADÍSTICA INVESTIGACIÓN -->
+        <article class="spec-card reveal reveal--delay-2" aria-label="Estadística para Investigación"
+          data-category="stat">
+          <div class="spec-icon">🔬</div>
+          <h3>Estadística para Investigación</h3>
+          <p>Diseño estadístico aplicado a tesis, investigaciones científicas y estudios académicos.</p>
+          <div class="spec-topics">
+            <span class="spec-chip">Inferencial</span>
+            <span class="spec-chip">Pruebas</span>
+            <span class="spec-chip">Regresión</span>
+            <span class="spec-chip">ANOVA</span>
+            <span class="spec-chip">Python/R</span>
+            <span class="spec-chip">Visualización científica</span>
+          </div>
+          <p class="spec-audience">Para tesistas · Licenciatura · Maestría · Doctorado</p>
+        </article>
+
+        <!-- MACHINE LEARNING -->
+        <article class="spec-card reveal reveal--delay-3" aria-label="Machine Learning" data-category="ml">
+          <div class="spec-icon">🤖</div>
+          <h3>Introducción a Machine Learning</h3>
+          <p>Comprende los conceptos fundamentales del aprendizaje automático y aplícalos en proyectos prácticos.</p>
+          <div class="spec-topics">
+            <span class="spec-chip">Train/Test</span>
+            <span class="spec-chip">Regresión</span>
+            <span class="spec-chip">Clasificación</span>
+            <span class="spec-chip">Árboles</span>
+            <span class="spec-chip">Random Forest</span>
+            <span class="spec-chip">Clustering</span>
+            <span class="spec-chip">Validación</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ LEARNING PATHS ════════════════════ -->
+  <section class="paths" id="rutas" aria-label="Rutas de aprendizaje">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Orientación</span>
+        <h2 class="section-title">¿No sabes por dónde empezar?</h2>
+        <p class="section-subtitle">Elige la ruta que mejor se ajuste a tus objetivos y sigue un camino progresivo.</p>
+      </div>
+      <div class="paths-grid">
+
+        <div class="path-card reveal">
+          <div class="path-header path-header--analyst">
+            <span class="path-icon">📊</span>
+            <h3>Ruta Analista de Datos</h3>
+          </div>
+          <div class="path-steps">
+            <div class="path-step"><span class="path-step-num">1</span> Excel Profesional</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">2</span> SQL</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">3</span> Power BI / Tableau</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">4</span> Python</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">5</span> Estadística</div>
           </div>
         </div>
-        <div class="cc-content">
-          <p class="cc-hook">Aprende Python desde cero y aplícalo a situaciones reales del trabajo.</p>
-          <div class="cc-topics">
-            <span class="topic-chip">Fundamentos</span>
-            <span class="topic-chip">Pandas</span>
-            <span class="topic-chip">NumPy</span>
-            <span class="topic-chip">Automatización</span>
-            <span class="topic-chip">Excel/CSV</span>
-            <span class="topic-chip">Reportes</span>
-            <span class="topic-chip">APIs</span>
-            <span class="topic-chip">Scripts</span>
-          </div>
-        </div>
-        <div class="cc-bottom">
-          <span class="cc-level-badge level--beginner">Desde cero</span>
-          <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoPythonCta">Más info</a>
-        </div>
-      </article>
 
-      <!-- SQL -->
-      <article class="course-card reveal reveal--delay-1" data-category="sql" aria-label="SQL y Bases de Datos">
-        <div class="cc-top">
-          <div class="cc-emoji bg--sql">🗄️</div>
-          <div class="cc-meta">
-            <div class="cc-category">SQL</div>
-            <h3>SQL y Bases de Datos</h3>
-            <p class="cc-tagline">Aprende a encontrar respuestas dentro de millones de datos.</p>
+        <div class="path-card reveal reveal--delay-1">
+          <div class="path-header path-header--ds">
+            <span class="path-icon">🧬</span>
+            <h3>Ruta Data Science</h3>
+          </div>
+          <div class="path-steps">
+            <div class="path-step"><span class="path-step-num">1</span> Python</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">2</span> SQL</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">3</span> Estadística</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">4</span> Machine Learning</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">5</span> Proyecto de Ciencia de Datos</div>
           </div>
         </div>
-        <div class="cc-content">
-          <p class="cc-hook">Consulta, analiza y gestiona bases de datos empresariales con confianza.</p>
-          <div class="cc-topics">
-            <span class="topic-chip">SELECT / WHERE</span>
-            <span class="topic-chip">GROUP BY</span>
-            <span class="topic-chip">JOIN</span>
-            <span class="topic-chip">CASE WHEN</span>
-            <span class="topic-chip">Subqueries</span>
-            <span class="topic-chip">CTE</span>
-            <span class="topic-chip">Ventanas</span>
-            <span class="topic-chip">Casos empresariales</span>
-          </div>
-        </div>
-        <div class="cc-bottom">
-          <span class="cc-level-badge level--beginner">Desde cero</span>
-          <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoSqlCta">Más info</a>
-        </div>
-      </article>
 
-      <!-- EXCEL -->
-      <article class="course-card reveal reveal--delay-2" data-category="excel" aria-label="Excel Profesional">
-        <div class="cc-top">
-          <div class="cc-emoji bg--excel">📊</div>
-          <div class="cc-meta">
-            <div class="cc-category">Excel</div>
-            <h3>Excel Profesional</h3>
-            <p class="cc-tagline">Excel aplicado al mundo laboral, no un curso básico.</p>
+        <div class="path-card reveal reveal--delay-2">
+          <div class="path-header path-header--auto">
+            <span class="path-icon">⚙️</span>
+            <h3>Ruta Automatización</h3>
+          </div>
+          <div class="path-steps">
+            <div class="path-step"><span class="path-step-num">1</span> Excel</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">2</span> Python</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">3</span> Automatización</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">4</span> Bases de Datos</div>
           </div>
         </div>
-        <div class="cc-content">
-          <p class="cc-hook">Transforma datos en reportes, dashboards y análisis empresariales.</p>
-          <div class="cc-topics">
-            <span class="topic-chip">BUSCARX</span>
-            <span class="topic-chip">Tablas Dinámicas</span>
-            <span class="topic-chip">Dashboards</span>
-            <span class="topic-chip">Power Query</span>
-            <span class="topic-chip">KPI</span>
-            <span class="topic-chip">Macros</span>
-            <span class="topic-chip">Proyecto empresarial</span>
-          </div>
-        </div>
-        <div class="cc-bottom">
-          <span class="cc-level-badge level--intermediate">Intermedio</span>
-          <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoExcelCta">Más info</a>
-        </div>
-      </article>
 
-      <!-- POWER BI -->
-      <article class="course-card reveal" data-category="bi" aria-label="Power BI">
-        <div class="cc-top">
-          <div class="cc-emoji bg--pbi">📉</div>
-          <div class="cc-meta">
-            <div class="cc-category">Business Intelligence</div>
-            <h3>Power BI</h3>
-            <p class="cc-tagline">Convierte datos en decisiones.</p>
+        <div class="path-card reveal reveal--delay-3">
+          <div class="path-header path-header--biz">
+            <span class="path-icon">🏢</span>
+            <h3>Ruta Empresarial</h3>
+          </div>
+          <div class="path-steps">
+            <div class="path-step"><span class="path-step-num">1</span> Excel</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">2</span> Power BI</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">3</span> Análisis de Datos</div>
+            <div class="path-arrow">↓</div>
+            <div class="path-step"><span class="path-step-num">4</span> Automatización</div>
           </div>
         </div>
-        <div class="cc-content">
-          <p class="cc-hook">Crea dashboards interactivos y reportes profesionales que impacten.</p>
-          <div class="cc-topics">
-            <span class="topic-chip">Power Query</span>
-            <span class="topic-chip">Modelo de datos</span>
-            <span class="topic-chip">DAX</span>
-            <span class="topic-chip">KPI</span>
-            <span class="topic-chip">Visualización</span>
-            <span class="topic-chip">Storytelling</span>
-            <span class="topic-chip">Dashboard empresarial</span>
-          </div>
-        </div>
-        <div class="cc-bottom">
-          <span class="cc-level-badge level--intermediate">Intermedio</span>
-          <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoPbiCta">Más info</a>
-        </div>
-      </article>
 
-      <!-- TABLEAU -->
-      <article class="course-card reveal reveal--delay-1" data-category="bi" aria-label="Tableau">
-        <div class="cc-top">
-          <div class="cc-emoji bg--tableau">🔷</div>
-          <div class="cc-meta">
-            <div class="cc-category">Business Intelligence</div>
-            <h3>Tableau</h3>
-            <p class="cc-tagline">Visualiza datos y cuenta historias con ellos.</p>
-          </div>
-        </div>
-        <div class="cc-content">
-          <p class="cc-hook">Diseña dashboards interactivos con la herramienta favorita de analistas.</p>
-          <div class="cc-topics">
-            <span class="topic-chip">Visualizaciones</span>
-            <span class="topic-chip">KPI</span>
-            <span class="topic-chip">Filtros</span>
-            <span class="topic-chip">Parámetros</span>
-            <span class="topic-chip">Storytelling</span>
-            <span class="topic-chip">Casos empresariales</span>
-          </div>
-        </div>
-        <div class="cc-bottom">
-          <span class="cc-level-badge level--intermediate">Intermedio</span>
-          <a href="#contacto" class="btn btn--ghost-dark btn--sm" id="cursoTableauCta">Más info</a>
-        </div>
-      </article>
-
-    </div><!-- /courses-grid -->
-  </div>
-</section>
-
-<!-- ════════════════════ SPECIALIZED ════════════════════ -->
-<section class="specialized" aria-label="Especialízate">
-  <div class="container">
-    <div class="text-center reveal">
-      <span class="section-tag section-tag--light">Nivel Avanzado</span>
-      <h2 class="section-title section-title--light">Especialízate</h2>
-      <p class="section-subtitle section-subtitle--light">Lleva tus habilidades al siguiente nivel con cursos más profundos y especializados.</p>
+      </div>
     </div>
-    <div class="spec-grid">
+  </section>
 
-      <!-- CIENCIA DE DATOS -->
-      <article class="spec-card reveal" aria-label="Ciencia de Datos" data-category="ds">
-        <div class="spec-icon">🧬</div>
-        <h3>Ciencia de Datos</h3>
-        <p>Análisis completo del ciclo de vida de los datos, desde la exploración hasta la construcción de modelos predictivos.</p>
-        <div class="spec-topics">
-          <span class="spec-chip">Pandas</span>
-          <span class="spec-chip">NumPy</span>
-          <span class="spec-chip">EDA</span>
-          <span class="spec-chip">Visualización</span>
-          <span class="spec-chip">Estadística</span>
-          <span class="spec-chip">Machine Learning</span>
-          <span class="spec-chip">Proyecto final</span>
+  <!-- ════════════════════ PORTFOLIO ════════════════════ -->
+  <section class="portfolio" id="proyectos" aria-label="Portafolio de proyectos">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-tag">Proyectos</span>
+        <h2 class="section-title">No solo aprendas. Construye.</h2>
+        <p class="section-subtitle">Desarrolla proyectos reales que puedas mostrar como evidencia práctica de tus
+          habilidades.</p>
+      </div>
+
+      <!-- Mock dashboards -->
+      <div class="mock-dashboards reveal">
+        <div class="mock-dash">
+          <div class="mock-dash-title">Dashboard Ventas · 2024</div>
+          <div class="mock-kpi">$2.4M</div>
+          <div class="mock-kpi-label">↑ 18% vs año anterior</div>
+          <div class="mock-bars">
+            <div class="mock-bar bar-c" style="height:40%"></div>
+            <div class="mock-bar bar-c2" style="height:65%"></div>
+            <div class="mock-bar bar-c" style="height:50%"></div>
+            <div class="mock-bar bar-c3" style="height:80%"></div>
+            <div class="mock-bar bar-c2" style="height:70%"></div>
+            <div class="mock-bar bar-c" style="height:90%"></div>
+          </div>
         </div>
-      </article>
-
-      <!-- ESTADÍSTICA ANÁLISIS -->
-      <article class="spec-card reveal reveal--delay-1" aria-label="Estadística para Análisis" data-category="stat">
-        <div class="spec-icon">📐</div>
-        <h3>Estadística para Análisis de Datos</h3>
-        <p>Comprende los fundamentos estadísticos necesarios para analizar información empresarial con confianza.</p>
-        <div class="spec-topics">
-          <span class="spec-chip">Descriptiva</span>
-          <span class="spec-chip">Probabilidad</span>
-          <span class="spec-chip">Hipótesis</span>
-          <span class="spec-chip">Correlación</span>
-          <span class="spec-chip">Regresión</span>
-          <span class="spec-chip">ANOVA</span>
+        <div class="mock-dash">
+          <div class="mock-dash-title">KPI Financiero</div>
+          <div class="mock-kpi">87.3%</div>
+          <div class="mock-kpi-label">Margen operativo</div>
+          <div class="mock-donut-wrap">
+            <div class="mock-donut">
+              <div class="mock-donut-hole"></div>
+            </div>
+          </div>
+          <div style="margin-top:.8rem;display:flex;gap:.5rem;flex-wrap:wrap">
+            <span
+              style="font-size:.65rem;color:rgba(255,255,255,.4);font-family:'Courier New',monospace">Ingresos</span>
+            <span style="font-size:.65rem;color:var(--cyan);font-family:'Courier New',monospace">Gastos</span>
+            <span
+              style="font-size:.65rem;color:rgba(255,255,255,.3);font-family:'Courier New',monospace">Utilidad</span>
+          </div>
         </div>
-      </article>
-
-      <!-- ESTADÍSTICA INVESTIGACIÓN -->
-      <article class="spec-card reveal reveal--delay-2" aria-label="Estadística para Investigación" data-category="stat">
-        <div class="spec-icon">🔬</div>
-        <h3>Estadística para Investigación</h3>
-        <p>Diseño estadístico aplicado a tesis, investigaciones científicas y estudios académicos.</p>
-        <div class="spec-topics">
-          <span class="spec-chip">Inferencial</span>
-          <span class="spec-chip">Pruebas</span>
-          <span class="spec-chip">Regresión</span>
-          <span class="spec-chip">ANOVA</span>
-          <span class="spec-chip">Python/R</span>
-          <span class="spec-chip">Visualización científica</span>
-        </div>
-        <p class="spec-audience">Para tesistas · Licenciatura · Maestría · Doctorado</p>
-      </article>
-
-      <!-- MACHINE LEARNING -->
-      <article class="spec-card reveal reveal--delay-3" aria-label="Machine Learning" data-category="ml">
-        <div class="spec-icon">🤖</div>
-        <h3>Introducción a Machine Learning</h3>
-        <p>Comprende los conceptos fundamentales del aprendizaje automático y aplícalos en proyectos prácticos.</p>
-        <div class="spec-topics">
-          <span class="spec-chip">Train/Test</span>
-          <span class="spec-chip">Regresión</span>
-          <span class="spec-chip">Clasificación</span>
-          <span class="spec-chip">Árboles</span>
-          <span class="spec-chip">Random Forest</span>
-          <span class="spec-chip">Clustering</span>
-          <span class="spec-chip">Validación</span>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════ LEARNING PATHS ════════════════════ -->
-<section class="paths" id="rutas" aria-label="Rutas de aprendizaje">
-  <div class="container">
-    <div class="text-center reveal">
-      <span class="section-tag">Orientación</span>
-      <h2 class="section-title">¿No sabes por dónde empezar?</h2>
-      <p class="section-subtitle">Elige la ruta que mejor se ajuste a tus objetivos y sigue un camino progresivo.</p>
-    </div>
-    <div class="paths-grid">
-
-      <div class="path-card reveal">
-        <div class="path-header path-header--analyst">
-          <span class="path-icon">📊</span>
-          <h3>Ruta Analista de Datos</h3>
-        </div>
-        <div class="path-steps">
-          <div class="path-step"><span class="path-step-num">1</span> Excel Profesional</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">2</span> SQL</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">3</span> Power BI / Tableau</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">4</span> Python</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">5</span> Estadística</div>
+        <div class="mock-dash">
+          <div class="mock-dash-title">Análisis de Clientes</div>
+          <div class="mock-kpi">1,284</div>
+          <div class="mock-kpi-label">Clientes activos este mes</div>
+          <div class="mock-line-wrap">
+            <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+              <polyline points="0,35 15,28 30,30 45,18 60,22 75,10 90,14 100,8" fill="none" stroke="#00d4ff"
+                stroke-width="2" opacity=".7" />
+              <polyline points="0,35 15,28 30,30 45,18 60,22 75,10 90,14 100,8 100,40 0,40"
+                fill="rgba(0,212,255,.08)" />
+            </svg>
+          </div>
         </div>
       </div>
 
-      <div class="path-card reveal reveal--delay-1">
-        <div class="path-header path-header--ds">
-          <span class="path-icon">🧬</span>
-          <h3>Ruta Data Science</h3>
+      <!-- Project list -->
+      <div class="portfolio-grid">
+        <div class="portfolio-item reveal">
+          <span class="pi-icon">📊</span>
+          <div class="pi-text">
+            <h4>Dashboard de ventas</h4>
+            <p>Power BI / Excel</p>
+          </div>
         </div>
-        <div class="path-steps">
-          <div class="path-step"><span class="path-step-num">1</span> Python</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">2</span> SQL</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">3</span> Estadística</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">4</span> Machine Learning</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">5</span> Proyecto de Ciencia de Datos</div>
+        <div class="portfolio-item reveal reveal--delay-1">
+          <span class="pi-icon">💰</span>
+          <div class="pi-text">
+            <h4>Dashboard financiero</h4>
+            <p>Tableau / Power BI</p>
+          </div>
         </div>
-      </div>
-
-      <div class="path-card reveal reveal--delay-2">
-        <div class="path-header path-header--auto">
-          <span class="path-icon">⚙️</span>
-          <h3>Ruta Automatización</h3>
+        <div class="portfolio-item reveal reveal--delay-2">
+          <span class="pi-icon">👥</span>
+          <div class="pi-text">
+            <h4>Dashboard de RRHH</h4>
+            <p>Power BI / Python</p>
+          </div>
         </div>
-        <div class="path-steps">
-          <div class="path-step"><span class="path-step-num">1</span> Excel</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">2</span> Python</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">3</span> Automatización</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">4</span> Bases de Datos</div>
+        <div class="portfolio-item reveal reveal--delay-3">
+          <span class="pi-icon">🔍</span>
+          <div class="pi-text">
+            <h4>Análisis de clientes</h4>
+            <p>Python · SQL</p>
+          </div>
         </div>
-      </div>
-
-      <div class="path-card reveal reveal--delay-3">
-        <div class="path-header path-header--biz">
-          <span class="path-icon">🏢</span>
-          <h3>Ruta Empresarial</h3>
+        <div class="portfolio-item reveal">
+          <span class="pi-icon">🗄️</span>
+          <div class="pi-text">
+            <h4>Base de datos de ventas</h4>
+            <p>SQL</p>
+          </div>
         </div>
-        <div class="path-steps">
-          <div class="path-step"><span class="path-step-num">1</span> Excel</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">2</span> Power BI</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">3</span> Análisis de Datos</div>
-          <div class="path-arrow">↓</div>
-          <div class="path-step"><span class="path-step-num">4</span> Automatización</div>
+        <div class="portfolio-item reveal reveal--delay-1">
+          <span class="pi-icon">🤖</span>
+          <div class="pi-text">
+            <h4>Automatización de reportes</h4>
+            <p>Python · Pandas</p>
+          </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════ PORTFOLIO ════════════════════ -->
-<section class="portfolio" id="proyectos" aria-label="Portafolio de proyectos">
-  <div class="container">
-    <div class="text-center reveal">
-      <span class="section-tag">Proyectos</span>
-      <h2 class="section-title">No solo aprendas. Construye.</h2>
-      <p class="section-subtitle">Desarrolla proyectos reales que puedas mostrar como evidencia práctica de tus habilidades.</p>
-    </div>
-
-    <!-- Mock dashboards -->
-    <div class="mock-dashboards reveal">
-      <div class="mock-dash">
-        <div class="mock-dash-title">Dashboard Ventas · 2024</div>
-        <div class="mock-kpi">$2.4M</div>
-        <div class="mock-kpi-label">↑ 18% vs año anterior</div>
-        <div class="mock-bars">
-          <div class="mock-bar bar-c" style="height:40%"></div>
-          <div class="mock-bar bar-c2" style="height:65%"></div>
-          <div class="mock-bar bar-c" style="height:50%"></div>
-          <div class="mock-bar bar-c3" style="height:80%"></div>
-          <div class="mock-bar bar-c2" style="height:70%"></div>
-          <div class="mock-bar bar-c" style="height:90%"></div>
+        <div class="portfolio-item reveal reveal--delay-2">
+          <span class="pi-icon">📐</span>
+          <div class="pi-text">
+            <h4>Análisis estadístico</h4>
+            <p>Python / R</p>
+          </div>
         </div>
-      </div>
-      <div class="mock-dash">
-        <div class="mock-dash-title">KPI Financiero</div>
-        <div class="mock-kpi">87.3%</div>
-        <div class="mock-kpi-label">Margen operativo</div>
-        <div class="mock-donut-wrap">
-          <div class="mock-donut"><div class="mock-donut-hole"></div></div>
+        <div class="portfolio-item reveal reveal--delay-3">
+          <span class="pi-icon">🧠</span>
+          <div class="pi-text">
+            <h4>Modelo predictivo</h4>
+            <p>Scikit-learn · Python</p>
+          </div>
         </div>
-        <div style="margin-top:.8rem;display:flex;gap:.5rem;flex-wrap:wrap">
-          <span style="font-size:.65rem;color:rgba(255,255,255,.4);font-family:'Courier New',monospace">Ingresos</span>
-          <span style="font-size:.65rem;color:var(--cyan);font-family:'Courier New',monospace">Gastos</span>
-          <span style="font-size:.65rem;color:rgba(255,255,255,.3);font-family:'Courier New',monospace">Utilidad</span>
+        <div class="portfolio-item reveal">
+          <span class="pi-icon">🎯</span>
+          <div class="pi-text">
+            <h4>Segmentación de clientes</h4>
+            <p>Clustering · Python</p>
+          </div>
         </div>
-      </div>
-      <div class="mock-dash">
-        <div class="mock-dash-title">Análisis de Clientes</div>
-        <div class="mock-kpi">1,284</div>
-        <div class="mock-kpi-label">Clientes activos este mes</div>
-        <div class="mock-line-wrap">
-          <svg viewBox="0 0 100 40" preserveAspectRatio="none">
-            <polyline points="0,35 15,28 30,30 45,18 60,22 75,10 90,14 100,8" fill="none" stroke="#00d4ff" stroke-width="2" opacity=".7"/>
-            <polyline points="0,35 15,28 30,30 45,18 60,22 75,10 90,14 100,8 100,40 0,40" fill="rgba(0,212,255,.08)"/>
-          </svg>
+        <div class="portfolio-item reveal reveal--delay-1">
+          <span class="pi-icon">📋</span>
+          <div class="pi-text">
+            <h4>Dashboard de KPIs</h4>
+            <p>Power BI · DAX</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Project list -->
-    <div class="portfolio-grid">
-      <div class="portfolio-item reveal">
-        <span class="pi-icon">📊</span>
-        <div class="pi-text"><h4>Dashboard de ventas</h4><p>Power BI / Excel</p></div>
-      </div>
-      <div class="portfolio-item reveal reveal--delay-1">
-        <span class="pi-icon">💰</span>
-        <div class="pi-text"><h4>Dashboard financiero</h4><p>Tableau / Power BI</p></div>
-      </div>
-      <div class="portfolio-item reveal reveal--delay-2">
-        <span class="pi-icon">👥</span>
-        <div class="pi-text"><h4>Dashboard de RRHH</h4><p>Power BI / Python</p></div>
-      </div>
-      <div class="portfolio-item reveal reveal--delay-3">
-        <span class="pi-icon">🔍</span>
-        <div class="pi-text"><h4>Análisis de clientes</h4><p>Python · SQL</p></div>
-      </div>
-      <div class="portfolio-item reveal">
-        <span class="pi-icon">🗄️</span>
-        <div class="pi-text"><h4>Base de datos de ventas</h4><p>SQL</p></div>
-      </div>
-      <div class="portfolio-item reveal reveal--delay-1">
-        <span class="pi-icon">🤖</span>
-        <div class="pi-text"><h4>Automatización de reportes</h4><p>Python · Pandas</p></div>
-      </div>
-      <div class="portfolio-item reveal reveal--delay-2">
-        <span class="pi-icon">📐</span>
-        <div class="pi-text"><h4>Análisis estadístico</h4><p>Python / R</p></div>
-      </div>
-      <div class="portfolio-item reveal reveal--delay-3">
-        <span class="pi-icon">🧠</span>
-        <div class="pi-text"><h4>Modelo predictivo</h4><p>Scikit-learn · Python</p></div>
-      </div>
-      <div class="portfolio-item reveal">
-        <span class="pi-icon">🎯</span>
-        <div class="pi-text"><h4>Segmentación de clientes</h4><p>Clustering · Python</p></div>
-      </div>
-      <div class="portfolio-item reveal reveal--delay-1">
-        <span class="pi-icon">📋</span>
-        <div class="pi-text"><h4>Dashboard de KPIs</h4><p>Power BI · DAX</p></div>
+  <!-- ════════════════════ EMPRESAS ════════════════════ -->
+  <section class="empresas" id="empresas" aria-label="Capacitación para empresas">
+    <div class="container empresas-inner">
+      <div class="empresas-layout">
+        <div class="empresas-left reveal">
+          <span class="section-tag section-tag--light">Para Empresas</span>
+          <h2>Convierte los datos de tu negocio en mejores decisiones.</h2>
+          <p>Capacitación práctica diseñada para empresarios y equipos de trabajo, aplicada directamente a los procesos
+            y datos de tu empresa.</p>
+          <ul class="empresas-list">
+            <li>Excel para equipos administrativos</li>
+            <li>Power BI para dashboards empresariales</li>
+            <li>SQL para equipos de análisis</li>
+            <li>Python para automatización</li>
+            <li>Análisis de datos para toma de decisiones</li>
+            <li>Estadística aplicada al negocio</li>
+            <li>Automatización de reportes</li>
+          </ul>
+        </div>
+        <div class="empresas-panel reveal reveal--delay-2">
+          <div class="empresas-panel-icon">🏢</div>
+          <h3>Capacitación a la medida de tu equipo</h3>
+          <p>Diseñamos el programa de acuerdo a las herramientas, datos y necesidades específicas de tu empresa.
+            Aprendizaje práctico desde el primer día.</p>
+          <a href="#contacto" class="btn btn--cyan btn--lg" id="empresasCta">Solicitar capacitación →</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ════════════════════ EMPRESAS ════════════════════ -->
-<section class="empresas" id="empresas" aria-label="Capacitación para empresas">
-  <div class="container empresas-inner">
-    <div class="empresas-layout">
-      <div class="empresas-left reveal">
-        <span class="section-tag section-tag--light">Para Empresas</span>
-        <h2>Convierte los datos de tu negocio en mejores decisiones.</h2>
-        <p>Capacitación práctica diseñada para empresarios y equipos de trabajo, aplicada directamente a los procesos y datos de tu empresa.</p>
-        <ul class="empresas-list">
-          <li>Excel para equipos administrativos</li>
-          <li>Power BI para dashboards empresariales</li>
-          <li>SQL para equipos de análisis</li>
-          <li>Python para automatización</li>
-          <li>Análisis de datos para toma de decisiones</li>
-          <li>Estadística aplicada al negocio</li>
-          <li>Automatización de reportes</li>
-        </ul>
-      </div>
-      <div class="empresas-panel reveal reveal--delay-2">
-        <div class="empresas-panel-icon">🏢</div>
-        <h3>Capacitación a la medida de tu equipo</h3>
-        <p>Diseñamos el programa de acuerdo a las herramientas, datos y necesidades específicas de tu empresa. Aprendizaje práctico desde el primer día.</p>
-        <a href="#contacto" class="btn btn--cyan btn--lg" id="empresasCta">Solicitar capacitación →</a>
+  <!-- ════════════════════ CTA FINAL / CONTACTO ════════════════════ -->
+  <section class="cta-final" id="contacto" aria-label="Contacto">
+    <div class="container">
+      <span class="section-tag">¿Listo para empezar?</span>
+      <h2>Haz que tus datos trabajen para ti.</h2>
+      <p>Contáctanos y encontremos el curso o ruta que mejor se adapta a tus objetivos.</p>
+      <div class="btn-group">
+        <a href="mailto:contacto@logimath.mx" class="btn btn--cyan btn--lg" id="ctaEmailBtn">Enviar mensaje</a>
+        <a href="index.html#contacto" class="btn btn--ghost-dark btn--lg" id="ctaFormBtn">Formulario de contacto</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ════════════════════ CTA FINAL / CONTACTO ════════════════════ -->
-<section class="cta-final" id="contacto" aria-label="Contacto">
-  <div class="container">
-    <span class="section-tag">¿Listo para empezar?</span>
-    <h2>Haz que tus datos trabajen para ti.</h2>
-    <p>Contáctanos y encontremos el curso o ruta que mejor se adapta a tus objetivos.</p>
-    <div class="btn-group">
-      <a href="mailto:contacto@logimath.mx" class="btn btn--cyan btn--lg" id="ctaEmailBtn">Enviar mensaje</a>
-      <a href="index.html#contacto"         class="btn btn--ghost-dark btn--lg" id="ctaFormBtn">Formulario de contacto</a>
+  <!-- ════════════════════ FOOTER ════════════════════ -->
+  <footer>
+    <div class="footer-inner container">
+      <span class="footer-brand">LogiMATH</span>
+      <span>Cursos Avanzados · Tecnología para el mundo laboral</span>
+      <span><a href="index.html">← Volver al sitio principal</a></span>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ════════════════════ FOOTER ════════════════════ -->
-<footer>
-  <div class="footer-inner container">
-    <span class="footer-brand">LogiMATH</span>
-    <span>Cursos Avanzados · Tecnología para el mundo laboral</span>
-    <span><a href="index.html">← Volver al sitio principal</a></span>
-  </div>
-</footer>
-
-<script src="cursos.js"></script>
+  <script src="cursos.js"></script>
 </body>
+
 </html>
