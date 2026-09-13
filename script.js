@@ -174,7 +174,7 @@ if (statsEl) {
   const counterData = [
     { selector: '.stat-card:nth-child(1) .stat-num', target: 50, suffix: '+' },
     { selector: '.stat-card:nth-child(3) .stat-num', target: 98, suffix: '%' },
-    { selector: '.stat-card:nth-child(5) .stat-num', target: 4, suffix: '+' },
+    { selector: '.stat-card:nth-child(5) .stat-num', target: 10, suffix: '+' },
   ];
 
   let animated = false;
